@@ -1,0 +1,96 @@
+
+
+@media all{
+body {
+  color:black;
+  background-color:whitesmoke;
+  font-family: arial, helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ h1 {
+  color:white; 
+  background-color: lightblue; 
+  width: 100%;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+  margin-top: 0; /* Remove default margin */
+  padding: 10px ; /* Add some padding for better appearance */
+  position: absolute;
+  top: 0;
+  left: 0;
+   z-index: 1; /* Ensure it's above other elements */
+}
+
+
+
+
+
+.navbar {
+  color:white;
+  background-color: navy;
+  font-family:Arial, sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin-top: 50px; /* Adjust this value based on your header height */
+  z-index: 0; /* Behind h1 */
+ position: absolute;
+ top: 50;
+ left: 0;
+ width:100%;
+  
+}
+
+.navbar li {
+  margin: 0;
+  padding: 10px;
+}
+
+p{
+ top:100px;
+ position: relative;
+}
+
+.service-dropdown {
+  position: relative;
+}
+
+/* Initially hide the select dropdown */
+.service-dropdown select {
+  display: none;
+}
+
+/* Show the select dropdown on hover */
+.service-dropdown:hover select {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+}
+@media print {
+  body {
+    background-color: white; /* Change background to white for print */
+  }
+
+  h1 {
+    background-color: transparent; /* Remove background color for print */
+    color: black; /* Change text color for print */
+    padding: 0; /* Remove padding for print */
+    margin: 0; /* Remove margin for print */
+    position: static; /* Return to default position */
+    width: auto; /* Auto width for print */
+  }
+
+  .navbar,
+  .navbar li {
+    background-color: transparent; /* Remove background color for print */
+    color: black; /* Change text color for print */
+    font-family: Arial, sans-serif; /* Apply default font for print */
+  }
+}
